@@ -1,6 +1,6 @@
 ﻿namespace ConexionOracleconCshar.UI
 {
-    partial class Form1
+    partial class frmPrincipal
     {
         /// <summary>
         /// Required designer variable.

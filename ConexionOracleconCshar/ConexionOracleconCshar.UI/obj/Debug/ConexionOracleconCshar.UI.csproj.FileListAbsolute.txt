@@ -6,3 +6,5 @@ C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\Con
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\obj\Debug\ConexionOracleconCshar.UI.csproj.GenerateResource.Cache
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\obj\Debug\ConexionOracleconCshar.UI.exe
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\obj\Debug\ConexionOracleconCshar.UI.pdb
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\obj\Debug\ConexionOracleconCshar.UI.frmLogin.resources
