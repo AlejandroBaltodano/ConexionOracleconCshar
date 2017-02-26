@@ -67,6 +67,9 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -89,6 +92,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConexionOracleconCshar.AccesoADatos\ConexionOracleconCshar.AccesoADatos.csproj">
+      <Project>{8eaa0f2d-bfd4-454a-9df3-780ebd7db786}</Project>
+      <Name>ConexionOracleconCshar.AccesoADatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConexionOracleconCshar.Model\ConexionOracleconCshar.Model.csproj">
+      <Project>{a0f776aa-d57d-42db-bce7-77a0562b1024}</Project>
+      <Name>ConexionOracleconCshar.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

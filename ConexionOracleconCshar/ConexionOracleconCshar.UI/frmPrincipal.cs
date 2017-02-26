@@ -12,9 +12,28 @@ namespace ConexionOracleconCshar.UI
 {
     public partial class frmPrincipal : Form
     {
-        public frmPrincipal()
+        ConexionOracleconCshar.Model.Usuario usuario;
+        public frmPrincipal(ConexionOracleconCshar.Model.Usuario usuarioRegistrado)
         {
+            usuario = usuarioRegistrado;
             InitializeComponent();
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+   label1.Text = "id "+usuario.idUsuario +"\ncedula "+ usuario.Cedula + 
+  "\nnombre "+usuario.NombreCompleto +"\nusuaio "+ usuario.NombreUsuario +
+  "\nrol "+usuario.idROL;
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Desea salir del Sistema?", "Informacion Requerida",
+    MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+    == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

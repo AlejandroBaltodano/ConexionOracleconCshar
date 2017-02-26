@@ -108,19 +108,28 @@ namespace ConexionOracleconCshar.AccesoADatos
 
             return ds;
         }
+        //public OracleDataReader Query(String query)
+        //{
+        //    Conectar();
+
+        //    OracleCommand comando = new OracleCommand(query, conexion);//conexion es la variable que contiene el string de conexion al esquema
+        //    OracleDataAdapter dataAdapter = new OracleDataAdapter();
+        //    dataAdapter.InsertCommand = comando;
+
+        //    return dataAdapter.InsertCommand.ExecuteReader();
+        //    //return comando.ExecuteReader();
+
+        //}
+
         public OracleDataReader Query(String query)
-        {
-            Conectar();
+    {
+        Conectar();
 
-            OracleCommand comando = new OracleCommand(query, conexion);//conexion es la variable que contiene el string de conexion al esquema
-            OracleDataAdapter dataAdapter = new OracleDataAdapter();
-            dataAdapter.InsertCommand = comando;
+        OracleCommand comando = new OracleCommand(query, conexion);
 
-            return dataAdapter.InsertCommand.ExecuteReader();
-            //return comando.ExecuteReader();
-
-        }
-
-
+        return comando.ExecuteReader();
     }
+
+
+}
 }
