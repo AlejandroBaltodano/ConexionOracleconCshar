@@ -21,9 +21,11 @@ namespace ConexionOracleconCshar.UI
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-   label1.Text = "id "+usuario.idUsuario +"\ncedula "+ usuario.Cedula + 
-  "\nnombre "+usuario.NombreCompleto +"\nusuaio "+ usuario.NombreUsuario +
-  "\nrol "+usuario.idROL;
+            lblUsuario.Text = usuario.NombreCompleto;
+            lblFecha.Text =""+ DateTime.Now;
+  // label1.Text = "id "+usuario.idUsuario +"\ncedula "+ usuario.Cedula + 
+  //"\nnombre "+usuario.NombreCompleto +"\nusuaio "+ usuario.NombreUsuario +
+  //"\nrol "+usuario.idROL;
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -35,5 +37,7 @@ namespace ConexionOracleconCshar.UI
                 Application.Exit();
             }
         }
+
+       
     }
 }
