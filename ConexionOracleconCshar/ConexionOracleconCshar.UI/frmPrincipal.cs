@@ -23,9 +23,7 @@ namespace ConexionOracleconCshar.UI
         {
             lblUsuario.Text = usuario.NombreCompleto;
             lblFecha.Text =""+ DateTime.Now;
-  // label1.Text = "id "+usuario.idUsuario +"\ncedula "+ usuario.Cedula + 
-  //"\nnombre "+usuario.NombreCompleto +"\nusuaio "+ usuario.NombreUsuario +
-  //"\nrol "+usuario.idROL;
+            BloquearPestañaUsuarios();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -38,6 +36,27 @@ namespace ConexionOracleconCshar.UI
             }
         }
 
-       
+        public void BloquearPestañaUsuarios() {
+            usuariosToolStripMenuItem.Enabled = false;
+            if (usuario.idROL == 3)
+            {
+                usuariosToolStripMenuItem.Enabled = false;
+            }
+            else if (usuario.idROL ==2)
+            {
+                usuariosToolStripMenuItem.Enabled = false;
+            }
+            else
+            {
+                usuariosToolStripMenuItem.Enabled = true;
+            }
+
+
+        }
+
+        private void mantenimientoUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmMantenimientoUsuarios(usuario).ShowDialog();
+        }
     }
 }

@@ -72,6 +72,7 @@
             this.mantenimientoUsuariosToolStripMenuItem.Name = "mantenimientoUsuariosToolStripMenuItem";
             this.mantenimientoUsuariosToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
             this.mantenimientoUsuariosToolStripMenuItem.Text = "Mantenimiento Usuarios";
+            this.mantenimientoUsuariosToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoUsuariosToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
