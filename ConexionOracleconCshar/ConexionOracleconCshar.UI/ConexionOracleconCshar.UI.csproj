@@ -56,10 +56,10 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMantenimientoUsuarios.cs">
+    <Compile Include="Usuarios\frmMantenimientoUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMantenimientoUsuarios.Designer.cs">
+    <Compile Include="Usuarios\frmMantenimientoUsuarios.Designer.cs">
       <DependentUpon>frmMantenimientoUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.cs">
@@ -70,10 +70,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuarios\frmNuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\frmNuevoUsuario.Designer.cs">
+      <DependentUpon>frmNuevoUsuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMantenimientoUsuarios.resx">
+    <EmbeddedResource Include="Usuarios\frmMantenimientoUsuarios.resx">
       <DependentUpon>frmMantenimientoUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
@@ -89,6 +95,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Usuarios\frmNuevoUsuario.resx">
+      <DependentUpon>frmNuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

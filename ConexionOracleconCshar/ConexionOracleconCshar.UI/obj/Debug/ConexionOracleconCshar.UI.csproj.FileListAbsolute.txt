@@ -14,3 +14,4 @@ C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\Con
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\bin\Debug\ConexionOracleconCshar.Model.pdb
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\obj\Debug\ConexionOracleconCshar.UI.frmPrincipal.resources
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\obj\Debug\ConexionOracleconCshar.UI.frmMantenimientoUsuarios.resources
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\obj\Debug\ConexionOracleconCshar.UI.Usuarios.frmNuevoUsuario.resources

@@ -54,5 +54,10 @@ namespace ConexionOracleconCshar.UI
 
         }
 
+        private void btnNuevoUsuario_Click(object sender, EventArgs e)
+        {
+            new Usuarios.frmNuevoUsuario().ShowDialog();
+            LlenarGridUsuarios();
+        }
     }
 }
