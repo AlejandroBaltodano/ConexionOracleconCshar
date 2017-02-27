@@ -130,6 +130,15 @@ namespace ConexionOracleconCshar.AccesoADatos
         return comando.ExecuteReader();
     }
 
+        public OracleCommand Validar(string query)
+        {// este metodo me recibe como parametro la consulta a ejecutar a la base de datos
+            Conectar();
+            OracleCommand sql = new OracleCommand(query, conexion);
+            sql.ExecuteScalar();
+            return sql;
 
-}
+        }
+
+
+    }
 }

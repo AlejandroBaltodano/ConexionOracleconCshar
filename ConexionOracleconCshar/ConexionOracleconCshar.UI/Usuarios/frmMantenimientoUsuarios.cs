@@ -13,8 +13,10 @@ namespace ConexionOracleconCshar.UI
     public partial class frmMantenimientoUsuarios : Form
     {
         ConexionOracleconCshar.Model.Usuario usuario;
+        int codigoUnicoUsuario = 0;
         public frmMantenimientoUsuarios(ConexionOracleconCshar.Model.Usuario usuarioRegistrado)
         {
+            usuario = usuarioRegistrado;
             InitializeComponent();
         }
 
@@ -45,10 +47,10 @@ namespace ConexionOracleconCshar.UI
         }
         public void PropiedadesGrip()
         {
-            this.dgvUsuarios.Columns[0].Visible = false;
+            //this.dgvUsuarios.Columns[0].Visible = false;
             this.dgvUsuarios.Columns[3].Visible = false;
             this.dgvUsuarios.Columns[4].Visible = false;
-            //this.dgvUsuarios.Columns[0].HeaderText = "# Usuario";
+            this.dgvUsuarios.Columns[0].HeaderText = "# Usuario";
             this.dgvUsuarios.Columns[2].HeaderText = "NOMBRE COMPLETO";
             this.dgvUsuarios.Columns[5].HeaderText = "ROL";
 
@@ -58,6 +60,21 @@ namespace ConexionOracleconCshar.UI
         {
             new Usuarios.frmNuevoUsuario().ShowDialog();
             LlenarGridUsuarios();
+        }
+
+        private void btnEditarUsuario_Click(object sender, EventArgs e)
+        {
+            if (dgvUsuarios.Rows.Count == 0)
+            {
+                MessageBox.Show("Selecione un registro a Editar", "Error del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+
+                codigoUnicoUsuario = int.Parse(this.dgvUsuarios.CurrentRow.Cells[0].Value.ToString());
+                new Usuarios.frmEditarUsuario(usuario,codigoUnicoUsuario).ShowDialog();
+                LlenarGridUsuarios();
+            }
         }
     }
 }

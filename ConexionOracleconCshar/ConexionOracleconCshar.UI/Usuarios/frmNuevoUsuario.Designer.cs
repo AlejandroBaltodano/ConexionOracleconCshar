@@ -31,20 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNuevoUsuario));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbROL = new System.Windows.Forms.ComboBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCedula = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnCrear = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.txtCedula = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.cbROL = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -54,7 +54,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(196, 9);
+            this.label1.Location = new System.Drawing.Point(182, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(221, 33);
             this.label1.TabIndex = 0;
@@ -71,33 +71,6 @@
             this.panel1.Size = new System.Drawing.Size(595, 45);
             this.panel1.TabIndex = 1;
             // 
-            // btnCrear
-            // 
-            this.btnCrear.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrear.Image = global::ConexionOracleconCshar.UI.Properties.Resources.add;
-            this.btnCrear.Location = new System.Drawing.Point(409, 3);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(182, 37);
-            this.btnCrear.TabIndex = 2;
-            this.btnCrear.Text = "Crear";
-            this.btnCrear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCrear.UseVisualStyleBackColor = false;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Image = global::ConexionOracleconCshar.UI.Properties.Resources.arrow_redo;
-            this.btnCancelar.Location = new System.Drawing.Point(3, 3);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(145, 37);
-            this.btnCancelar.TabIndex = 0;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtContraseña);
@@ -110,6 +83,38 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Registro";
+            // 
+            // txtContraseña
+            // 
+            this.txtContraseña.Location = new System.Drawing.Point(240, 76);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(252, 26);
+            this.txtContraseña.TabIndex = 3;
+            // 
+            // txtNombreUsuario
+            // 
+            this.txtNombreUsuario.Location = new System.Drawing.Point(240, 35);
+            this.txtNombreUsuario.Name = "txtNombreUsuario";
+            this.txtNombreUsuario.Size = new System.Drawing.Size(252, 26);
+            this.txtNombreUsuario.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(24, 79);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(123, 20);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "CONTRASEÑA:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(24, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(189, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "NOMBRE DE USUARIO:";
             // 
             // groupBox2
             // 
@@ -126,41 +131,29 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Personales";
             // 
-            // label2
+            // cbROL
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "NOMBRE DE USUARIO:";
+            this.cbROL.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.cbROL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbROL.FormattingEnabled = true;
+            this.cbROL.Location = new System.Drawing.Point(240, 100);
+            this.cbROL.Name = "cbROL";
+            this.cbROL.Size = new System.Drawing.Size(252, 28);
+            this.cbROL.TabIndex = 6;
             // 
-            // label3
+            // txtNombre
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 79);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 20);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "CONTRASEÑA:";
+            this.txtNombre.Location = new System.Drawing.Point(240, 63);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(252, 26);
+            this.txtNombre.TabIndex = 5;
             // 
-            // label4
+            // txtCedula
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 32);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 20);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "CEDULA:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 66);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 20);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "NOMBRE COMPLETO:";
+            this.txtCedula.Location = new System.Drawing.Point(240, 29);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(252, 26);
+            this.txtCedula.TabIndex = 4;
             // 
             // label6
             // 
@@ -171,41 +164,51 @@
             this.label6.TabIndex = 3;
             this.label6.Text = "ROL:";
             // 
-            // txtNombreUsuario
+            // label5
             // 
-            this.txtNombreUsuario.Location = new System.Drawing.Point(240, 35);
-            this.txtNombreUsuario.Name = "txtNombreUsuario";
-            this.txtNombreUsuario.Size = new System.Drawing.Size(252, 26);
-            this.txtNombreUsuario.TabIndex = 2;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(24, 66);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(174, 20);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "NOMBRE COMPLETO:";
             // 
-            // txtContraseña
+            // label4
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(240, 76);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(252, 26);
-            this.txtContraseña.TabIndex = 3;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(24, 32);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 20);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "CEDULA:";
             // 
-            // txtCedula
+            // btnCrear
             // 
-            this.txtCedula.Location = new System.Drawing.Point(240, 29);
-            this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(252, 26);
-            this.txtCedula.TabIndex = 4;
+            this.btnCrear.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrear.Image = global::ConexionOracleconCshar.UI.Properties.Resources.add;
+            this.btnCrear.Location = new System.Drawing.Point(409, 3);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(182, 37);
+            this.btnCrear.TabIndex = 2;
+            this.btnCrear.Text = "Crear";
+            this.btnCrear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCrear.UseVisualStyleBackColor = false;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
-            // txtNombre
+            // btnCancelar
             // 
-            this.txtNombre.Location = new System.Drawing.Point(240, 63);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(252, 26);
-            this.txtNombre.TabIndex = 5;
-            // 
-            // cbROL
-            // 
-            this.cbROL.FormattingEnabled = true;
-            this.cbROL.Location = new System.Drawing.Point(240, 100);
-            this.cbROL.Name = "cbROL";
-            this.cbROL.Size = new System.Drawing.Size(252, 28);
-            this.cbROL.TabIndex = 6;
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Image = global::ConexionOracleconCshar.UI.Properties.Resources.arrow_redo;
+            this.btnCancelar.Location = new System.Drawing.Point(3, 3);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(145, 37);
+            this.btnCancelar.TabIndex = 0;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmNuevoUsuario
             // 
@@ -221,6 +224,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximumSize = new System.Drawing.Size(611, 416);
+            this.MinimumSize = new System.Drawing.Size(611, 416);
             this.Name = "frmNuevoUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crear Usuario";

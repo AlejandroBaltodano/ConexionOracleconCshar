@@ -149,6 +149,7 @@
             this.btnEditarUsuario.Text = "Editar";
             this.btnEditarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditarUsuario.UseVisualStyleBackColor = false;
+            this.btnEditarUsuario.Click += new System.EventHandler(this.btnEditarUsuario_Click);
             // 
             // dgvUsuarios
             // 

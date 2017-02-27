@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ConexionOracleconCshar.UI.Usuarios
 {
     public partial class frmNuevoUsuario : Form
@@ -21,6 +22,7 @@ namespace ConexionOracleconCshar.UI.Usuarios
         private void frmNuevoUsuario_Load(object sender, EventArgs e)
         {
             SeleccionarPrimero();
+            llenarComboBoxRoles();
         }
         public void SeleccionarPrimero() {
 
@@ -31,6 +33,61 @@ namespace ConexionOracleconCshar.UI.Usuarios
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        public bool ValidarCampos()
+        {
+            bool bandera = false;
+
+            if (!string.IsNullOrEmpty(txtNombreUsuario.Text) && !string.IsNullOrEmpty(txtContraseña.Text) &&
+            !string.IsNullOrEmpty(txtCedula.Text) && !string.IsNullOrEmpty(txtNombre.Text))
+            {
+                bandera = true;
+            }
+
+            return bandera;
+
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ValidarCampos()  )
+                {
+                    
+          ConexionOracleconCshar.AccesoADatos.ConexionOracle conexion = new ConexionOracleconCshar.AccesoADatos.ConexionOracle();
+string Query = "begin " +
+   "INSERTARUSUARIO('" + txtCedula.Text + "','" + txtNombre.Text + "','" + txtNombreUsuario.Text + "','" + txtContraseña.Text + "'," + cbROL.SelectedValue + " ); " +
+                      "end; ";
+                        // se envia los parametros en la consulta
+                        conexion.OperacionDML(Query);
+                        MessageBox.Show("Transaccion Realizada exitosamente", "Informacion del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.Close();
+                }
+                else
+                {
+             MessageBox.Show("Debe ingresar datos en los campos", "Error del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Problemas al Realizar la Transaccion", "Error del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        public void llenarComboBoxRoles()
+        { 
+            ConexionOracleconCshar.AccesoADatos.ConexionOracle conexion = new ConexionOracleconCshar.AccesoADatos.ConexionOracle();
+            string Query = "select * from TABLA_ROLES_USUARIOS";//procedimiento almacenado que me realiza la consulta
+             string id = "IDROLUSUARIO"; //id de la tabla
+            string descripcion = "NOMBREROL";
+            string nombreTabla = "TABLA_ROLES_USUARIOS";//nombre de la tabla
+            conexion.LlenarCombo(Query, cbROL, id, descripcion, nombreTabla);// se invoca el metodo
+
         }
     }
 }
