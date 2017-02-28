@@ -58,5 +58,10 @@ namespace ConexionOracleconCshar.UI
         {
             new frmMantenimientoUsuarios(usuario).ShowDialog();
         }
+
+        private void usuariosDelSistemaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Reportes.frmReporteUsuario().ShowDialog();
+        }
     }
 }
