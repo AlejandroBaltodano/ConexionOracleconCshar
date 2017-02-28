@@ -19,7 +19,7 @@ namespace ConexionOracleconCshar.UI.Reportes
 
         private void frmReporte_Load(object sender, EventArgs e)
         {
-           
+            this.tablA_USUARIOTableAdapter2.Fill(this.dataSetEsquemaMigracion1.TABLA_USUARIO);
             this.reportViewer1.RefreshReport();
         }
     }

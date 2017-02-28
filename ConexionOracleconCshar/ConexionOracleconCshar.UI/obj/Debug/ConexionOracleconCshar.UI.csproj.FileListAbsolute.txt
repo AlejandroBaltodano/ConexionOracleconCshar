@@ -28,6 +28,6 @@ C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\Con
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
-C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\obj\Debug\ConexionOracleconCshar.UI.Reportes.frmReporteUsuario.resources
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\obj\Debug\RdlCompile.cache
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\obj\Debug\RdlCompile.compiled
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\obj\Debug\ConexionOracleconCshar.UI.Reportes.frmReporte.resources
