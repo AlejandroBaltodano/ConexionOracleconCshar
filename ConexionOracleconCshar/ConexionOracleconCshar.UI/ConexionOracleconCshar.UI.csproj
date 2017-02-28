@@ -64,12 +64,6 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\frmReporteUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes\frmReporteUsuario.Designer.cs">
-      <DependentUpon>frmReporteUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="Usuarios\frmEditarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,9 +92,6 @@
     </Compile>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\frmReporteUsuario.resx">
-      <DependentUpon>frmReporteUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReportedeTodoslosUsuarios.rdlc" />
     <EmbeddedResource Include="Usuarios\frmEditarUsuario.resx">
