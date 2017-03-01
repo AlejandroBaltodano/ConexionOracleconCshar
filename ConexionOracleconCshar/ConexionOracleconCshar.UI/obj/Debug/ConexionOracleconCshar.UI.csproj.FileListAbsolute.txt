@@ -32,3 +32,7 @@ C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\Con
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\obj\Debug\RdlCompile.compiled
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\obj\Debug\ConexionOracleconCshar.UI.Reportes.frmReporte.resources
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\obj\Debug\ConexionOracleconCshar.UI.Reportes.frmReporteDeUnUsuario.resources
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\obj\Debug\ConexionOracleconCshar.UI.csproj.ConexionOracleconCshar.UI.exe.config
