@@ -39,7 +39,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnEditarUsuario = new System.Windows.Forms.Button();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -49,7 +48,6 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnRegresar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 377);
@@ -168,20 +166,6 @@
             this.dgvUsuarios.Size = new System.Drawing.Size(758, 278);
             this.dgvUsuarios.TabIndex = 2;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Image = global::ConexionOracleconCshar.UI.Properties.Resources.arrow_redo;
-            this.button1.Location = new System.Drawing.Point(304, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 39);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "prueba";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // frmMantenimientoUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -220,6 +204,5 @@
         private System.Windows.Forms.TextBox txtBuscarUsuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
     }
 }
