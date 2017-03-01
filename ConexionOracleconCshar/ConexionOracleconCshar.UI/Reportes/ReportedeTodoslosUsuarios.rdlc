@@ -78,7 +78,6 @@
             </Style>
           </Textbox>
           <Textbox Name="ExecutionTime">
-            <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
