@@ -4,3 +4,4 @@ C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\Con
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.AccesoADatos\bin\Debug\Oracle.ManagedDataAccess.dll
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.AccesoADatos\obj\Debug\ConexionOracleconCshar.AccesoADatos.dll
 C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.AccesoADatos\obj\Debug\ConexionOracleconCshar.AccesoADatos.pdb
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.AccesoADatos\obj\Debug\ConexionOracleconCshar.AccesoADatos.csprojResolveAssemblyReference.cache

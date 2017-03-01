@@ -69,6 +69,12 @@
     <Compile Include="Reportes\frmReporte.Designer.cs">
       <DependentUpon>frmReporte.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\frmReporteDeUnUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmReporteDeUnUsuario.Designer.cs">
+      <DependentUpon>frmReporteDeUnUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios\frmEditarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,7 +107,11 @@
     <EmbeddedResource Include="Reportes\frmReporte.resx">
       <DependentUpon>frmReporte.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmReporteDeUnUsuario.resx">
+      <DependentUpon>frmReporteDeUnUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReportedeTodoslosUsuarios.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteDeUnUsuario.rdlc" />
     <EmbeddedResource Include="Usuarios\frmEditarUsuario.resx">
       <DependentUpon>frmEditarUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,7 +184,12 @@
   <ItemGroup>
     <None Include="Resources\page_save.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\email_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone_add.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -31,15 +31,20 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporte));
+            this.tABLAUSUARIOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetEsquemaMigracion1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetEsquemaMigracion1 = new ConexionOracleconCshar.UI.DataSetEsquemaMigracion();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tablA_USUARIOTableAdapter2 = new ConexionOracleconCshar.UI.DataSetEsquemaMigracionTableAdapters.TABLA_USUARIOTableAdapter();
-            this.tABLAUSUARIOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.tABLAUSUARIOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetEsquemaMigracion1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetEsquemaMigracion1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tABLAUSUARIOBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tABLAUSUARIOBindingSource
+            // 
+            this.tABLAUSUARIOBindingSource.DataMember = "TABLA_USUARIO";
+            this.tABLAUSUARIOBindingSource.DataSource = this.dataSetEsquemaMigracion1BindingSource;
             // 
             // dataSetEsquemaMigracion1BindingSource
             // 
@@ -67,11 +72,6 @@
             // 
             this.tablA_USUARIOTableAdapter2.ClearBeforeFill = true;
             // 
-            // tABLAUSUARIOBindingSource
-            // 
-            this.tABLAUSUARIOBindingSource.DataMember = "TABLA_USUARIO";
-            this.tABLAUSUARIOBindingSource.DataSource = this.dataSetEsquemaMigracion1BindingSource;
-            // 
             // frmReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -80,15 +80,16 @@
             this.ClientSize = new System.Drawing.Size(714, 454);
             this.Controls.Add(this.reportViewer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmReporte";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Generar Reporte";
             this.Load += new System.EventHandler(this.frmReporte_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tABLAUSUARIOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetEsquemaMigracion1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetEsquemaMigracion1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tABLAUSUARIOBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
