@@ -31,19 +31,31 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporte));
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataSetEsquemaMigracion1 = new ConexionOracleconCshar.UI.DataSetEsquemaMigracion();
-            this.tablA_USUARIOTableAdapter2 = new ConexionOracleconCshar.UI.DataSetEsquemaMigracionTableAdapters.TABLA_USUARIOTableAdapter();
             this.dataSetEsquemaMigracion1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetEsquemaMigracion1)).BeginInit();
+            this.dataSetEsquemaMigracion1 = new ConexionOracleconCshar.UI.DataSetEsquemaMigracion();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.tablA_USUARIOTableAdapter2 = new ConexionOracleconCshar.UI.DataSetEsquemaMigracionTableAdapters.TABLA_USUARIOTableAdapter();
+            this.tABLAUSUARIOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataSetEsquemaMigracion1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetEsquemaMigracion1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tABLAUSUARIOBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dataSetEsquemaMigracion1BindingSource
+            // 
+            this.dataSetEsquemaMigracion1BindingSource.DataSource = this.dataSetEsquemaMigracion1;
+            this.dataSetEsquemaMigracion1BindingSource.Position = 0;
+            // 
+            // dataSetEsquemaMigracion1
+            // 
+            this.dataSetEsquemaMigracion1.DataSetName = "DataSetEsquemaMigracion";
+            this.dataSetEsquemaMigracion1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "Usuarios";
-            reportDataSource1.Value = this.dataSetEsquemaMigracion1BindingSource;
+            reportDataSource1.Value = this.tABLAUSUARIOBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "ConexionOracleconCshar.UI.Reportes.ReportedeTodoslosUsuarios.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
@@ -51,19 +63,14 @@
             this.reportViewer1.Size = new System.Drawing.Size(714, 454);
             this.reportViewer1.TabIndex = 0;
             // 
-            // dataSetEsquemaMigracion1
-            // 
-            this.dataSetEsquemaMigracion1.DataSetName = "DataSetEsquemaMigracion";
-            this.dataSetEsquemaMigracion1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tablA_USUARIOTableAdapter2
             // 
             this.tablA_USUARIOTableAdapter2.ClearBeforeFill = true;
             // 
-            // dataSetEsquemaMigracion1BindingSource
+            // tABLAUSUARIOBindingSource
             // 
-            this.dataSetEsquemaMigracion1BindingSource.DataSource = this.dataSetEsquemaMigracion1;
-            this.dataSetEsquemaMigracion1BindingSource.Position = 0;
+            this.tABLAUSUARIOBindingSource.DataMember = "TABLA_USUARIO";
+            this.tABLAUSUARIOBindingSource.DataSource = this.dataSetEsquemaMigracion1BindingSource;
             // 
             // frmReporte
             // 
@@ -79,8 +86,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Generar Reporte";
             this.Load += new System.EventHandler(this.frmReporte_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetEsquemaMigracion1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetEsquemaMigracion1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetEsquemaMigracion1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tABLAUSUARIOBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -91,5 +99,6 @@
         private DataSetEsquemaMigracion dataSetEsquemaMigracion1;
         private DataSetEsquemaMigracionTableAdapters.TABLA_USUARIOTableAdapter tablA_USUARIOTableAdapter2;
         private System.Windows.Forms.BindingSource dataSetEsquemaMigracion1BindingSource;
+        private System.Windows.Forms.BindingSource tABLAUSUARIOBindingSource;
     }
 }

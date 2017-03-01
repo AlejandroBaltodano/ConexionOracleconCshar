@@ -74,7 +74,19 @@ namespace ConexionOracleconCshar.UI
                 codigoUnicoUsuario = int.Parse(this.dgvUsuarios.CurrentRow.Cells[0].Value.ToString());
                 new Usuarios.frmEditarUsuario(usuario,codigoUnicoUsuario).ShowDialog();
                 LlenarGridUsuarios();
+              
             }
+
+           
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string charles = " ";
+            
+            MessageBox.Show(charles+ "  ");
+
         }
     }
 }

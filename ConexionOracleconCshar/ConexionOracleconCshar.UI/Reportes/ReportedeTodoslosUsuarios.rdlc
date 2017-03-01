@@ -3,7 +3,7 @@
   <Body>
     <ReportItems>
       <Line Name="Line1">
-        <Top>0.03528cm</Top>
+        <Top>1.58186cm</Top>
         <Height>0cm</Height>
         <Width>19.84375cm</Width>
         <Style>
@@ -33,7 +33,6 @@
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
             <Top>0.42333cm</Top>
-            <Left>0.3937cm</Left>
             <Height>0.6cm</Height>
             <Width>4.37854cm</Width>
             <Style>
@@ -65,7 +64,6 @@
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
             <Top>1.19972cm</Top>
-            <Left>0.3937cm</Left>
             <Height>0.6cm</Height>
             <Width>1.5475cm</Width>
             <ZIndex>1</ZIndex>
@@ -97,9 +95,9 @@
             </Paragraphs>
             <rd:DefaultName>ExecutionTime</rd:DefaultName>
             <Top>1.19972cm</Top>
-            <Left>2.27224cm</Left>
+            <Left>1.87854cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.47896cm</Width>
+            <Width>3.82292cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -120,7 +118,7 @@
                   <TextRun>
                     <Value>Reporte de Usuarios del Sistema</Value>
                     <Style>
-                      <FontSize>24pt</FontSize>
+                      <FontSize>18pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -129,9 +127,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>0.42333cm</Top>
-            <Left>6.50465cm</Left>
+            <Left>5.87785cm</Left>
             <Height>1.18208cm</Height>
-            <Width>12.81558cm</Width>
+            <Width>9.53475cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -145,9 +143,10 @@
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>0.34078cm</Top>
-        <Height>2.72521cm</Height>
-        <Width>19.84375cm</Width>
+        <Top>1.65241cm</Top>
+        <Left>0.7929cm</Left>
+        <Height>1.98438cm</Height>
+        <Width>15.53422cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -159,13 +158,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>6.30884cm</Width>
+              <Width>5.14816cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>6.30884cm</Width>
+              <Width>5.88095cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>6.30884cm</Width>
+              <Width>4.50511cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -196,6 +195,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>Gray</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -228,6 +228,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>Gray</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -260,6 +261,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>Gray</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -391,10 +393,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Usuarios</DataSetName>
-        <Top>4.15078cm</Top>
-        <Left>0.3937cm</Left>
+        <Top>3.81318cm</Top>
+        <Left>0.7929cm</Left>
         <Height>1.2cm</Height>
-        <Width>18.92653cm</Width>
+        <Width>15.53422cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -402,87 +404,76 @@
           </Border>
         </Style>
       </Tablix>
+      <Image Name="Imagen">
+        <Source>Embedded</Source>
+        <Value>teacher_icon</Value>
+        <Sizing>FitProportional</Sizing>
+        <Left>1.47053cm</Left>
+        <Height>1.40547cm</Height>
+        <Width>3.43146cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>Double</Style>
+          </Border>
+        </Style>
+      </Image>
+      <Textbox Name="Textbox7">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Universidad De Costa Rica Sede Guanacaste</Value>
+                <Style>
+                  <FontSize>16pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Control de Reactivos Quimicos</Value>
+                <Style>
+                  <FontSize>16pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox7</rd:DefaultName>
+        <Left>5.34296cm</Left>
+        <Height>1.40547cm</Height>
+        <Width>11.6275cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>3.6875in</Height>
+    <Height>3.89993in</Height>
     <Style>
       <Border>
         <Style>None</Style>
       </Border>
     </Style>
   </Body>
-  <Width>7.8125in</Width>
+  <Width>7.9375in</Width>
   <Page>
-    <PageHeader>
-      <Height>2.54cm</Height>
-      <PrintOnFirstPage>true</PrintOnFirstPage>
-      <PrintOnLastPage>true</PrintOnLastPage>
-      <ReportItems>
-        <Image Name="Imagen">
-          <Source>Embedded</Source>
-          <Value>teacher_icon</Value>
-          <Sizing>FitProportional</Sizing>
-          <Height>2.39889cm</Height>
-          <Width>3.43146cm</Width>
-          <Style>
-            <Border>
-              <Style>Double</Style>
-            </Border>
-          </Style>
-        </Image>
-        <Textbox Name="Textbox7">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Universidad De Costa Rica Sede Guanacaste</Value>
-                  <Style>
-                    <FontSize>16pt</FontSize>
-                    <FontWeight>Normal</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Control de Reactivos Quimicos</Value>
-                  <Style>
-                    <FontSize>16pt</FontSize>
-                    <FontWeight>Normal</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox7</rd:DefaultName>
-          <Top>0.50112cm</Top>
-          <Left>5.40458cm</Left>
-          <Height>1.53776cm</Height>
-          <Width>11.6275cm</Width>
-          <ZIndex>1</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-      </ReportItems>
-      <Style>
-        <Border>
-          <Style>None</Style>
-        </Border>
-      </Style>
-    </PageHeader>
     <PageFooter>
       <Height>2.54cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
