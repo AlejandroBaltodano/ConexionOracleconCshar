@@ -30,22 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMantenimientoUsuarios));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnImprimirUnUsuario = new System.Windows.Forms.Button();
+            this.btnRegresar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBuscarUsuario = new System.Windows.Forms.TextBox();
+            this.btnNuevoUsuario = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnEditarUsuario = new System.Windows.Forms.Button();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.btnNuevoTelefono = new System.Windows.Forms.Button();
             this.btnNuevoCorreo = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnNuevoUsuario = new System.Windows.Forms.Button();
-            this.btnEditarUsuario = new System.Windows.Forms.Button();
-            this.btnImprimirUnUsuario = new System.Windows.Forms.Button();
-            this.btnRegresar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,6 +58,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(758, 50);
             this.panel1.TabIndex = 0;
+            // 
+            // btnImprimirUnUsuario
+            // 
+            this.btnImprimirUnUsuario.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnImprimirUnUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnImprimirUnUsuario.Image = global::ConexionOracleconCshar.UI.Properties.Resources.page_save;
+            this.btnImprimirUnUsuario.Location = new System.Drawing.Point(575, 6);
+            this.btnImprimirUnUsuario.Name = "btnImprimirUnUsuario";
+            this.btnImprimirUnUsuario.Size = new System.Drawing.Size(178, 39);
+            this.btnImprimirUnUsuario.TabIndex = 1;
+            this.btnImprimirUnUsuario.Text = "Imprimir un Usuario";
+            this.btnImprimirUnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnImprimirUnUsuario.UseVisualStyleBackColor = false;
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRegresar.Image = global::ConexionOracleconCshar.UI.Properties.Resources.arrow_redo;
+            this.btnRegresar.Location = new System.Drawing.Point(12, 6);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(148, 39);
+            this.btnRegresar.TabIndex = 0;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // panel2
             // 
@@ -73,6 +100,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(758, 99);
             this.panel2.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::ConexionOracleconCshar.UI.Properties.Resources.search16_h;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(412, 70);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 26);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -90,6 +127,22 @@
             this.txtBuscarUsuario.Name = "txtBuscarUsuario";
             this.txtBuscarUsuario.Size = new System.Drawing.Size(186, 26);
             this.txtBuscarUsuario.TabIndex = 4;
+            this.txtBuscarUsuario.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscarUsuario_KeyUp);
+            // 
+            // btnNuevoUsuario
+            // 
+            this.btnNuevoUsuario.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnNuevoUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNuevoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoUsuario.Image = global::ConexionOracleconCshar.UI.Properties.Resources.add;
+            this.btnNuevoUsuario.Location = new System.Drawing.Point(631, 57);
+            this.btnNuevoUsuario.Name = "btnNuevoUsuario";
+            this.btnNuevoUsuario.Size = new System.Drawing.Size(123, 39);
+            this.btnNuevoUsuario.TabIndex = 3;
+            this.btnNuevoUsuario.Text = "Crear";
+            this.btnNuevoUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNuevoUsuario.UseVisualStyleBackColor = false;
+            this.btnNuevoUsuario.Click += new System.EventHandler(this.btnNuevoUsuario_Click);
             // 
             // label1
             // 
@@ -100,6 +153,21 @@
             this.label1.Size = new System.Drawing.Size(500, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "LISTA DE USUARIOS DEL SISTEMA";
+            // 
+            // btnEditarUsuario
+            // 
+            this.btnEditarUsuario.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEditarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEditarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarUsuario.Image = global::ConexionOracleconCshar.UI.Properties.Resources.user_edit;
+            this.btnEditarUsuario.Location = new System.Drawing.Point(495, 57);
+            this.btnEditarUsuario.Name = "btnEditarUsuario";
+            this.btnEditarUsuario.Size = new System.Drawing.Size(130, 39);
+            this.btnEditarUsuario.TabIndex = 2;
+            this.btnEditarUsuario.Text = "Editar";
+            this.btnEditarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditarUsuario.UseVisualStyleBackColor = false;
+            this.btnEditarUsuario.Click += new System.EventHandler(this.btnEditarUsuario_Click);
             // 
             // dgvUsuarios
             // 
@@ -142,73 +210,6 @@
             this.btnNuevoCorreo.UseVisualStyleBackColor = false;
             this.btnNuevoCorreo.Click += new System.EventHandler(this.btnNuevoCorreo_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::ConexionOracleconCshar.UI.Properties.Resources.search16_h;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(412, 70);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 26);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnNuevoUsuario
-            // 
-            this.btnNuevoUsuario.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnNuevoUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnNuevoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoUsuario.Image = global::ConexionOracleconCshar.UI.Properties.Resources.add;
-            this.btnNuevoUsuario.Location = new System.Drawing.Point(631, 57);
-            this.btnNuevoUsuario.Name = "btnNuevoUsuario";
-            this.btnNuevoUsuario.Size = new System.Drawing.Size(123, 39);
-            this.btnNuevoUsuario.TabIndex = 3;
-            this.btnNuevoUsuario.Text = "Crear";
-            this.btnNuevoUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNuevoUsuario.UseVisualStyleBackColor = false;
-            this.btnNuevoUsuario.Click += new System.EventHandler(this.btnNuevoUsuario_Click);
-            // 
-            // btnEditarUsuario
-            // 
-            this.btnEditarUsuario.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEditarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarUsuario.Image = global::ConexionOracleconCshar.UI.Properties.Resources.user_edit;
-            this.btnEditarUsuario.Location = new System.Drawing.Point(495, 57);
-            this.btnEditarUsuario.Name = "btnEditarUsuario";
-            this.btnEditarUsuario.Size = new System.Drawing.Size(130, 39);
-            this.btnEditarUsuario.TabIndex = 2;
-            this.btnEditarUsuario.Text = "Editar";
-            this.btnEditarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEditarUsuario.UseVisualStyleBackColor = false;
-            this.btnEditarUsuario.Click += new System.EventHandler(this.btnEditarUsuario_Click);
-            // 
-            // btnImprimirUnUsuario
-            // 
-            this.btnImprimirUnUsuario.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnImprimirUnUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnImprimirUnUsuario.Image = global::ConexionOracleconCshar.UI.Properties.Resources.page_save;
-            this.btnImprimirUnUsuario.Location = new System.Drawing.Point(575, 6);
-            this.btnImprimirUnUsuario.Name = "btnImprimirUnUsuario";
-            this.btnImprimirUnUsuario.Size = new System.Drawing.Size(178, 39);
-            this.btnImprimirUnUsuario.TabIndex = 1;
-            this.btnImprimirUnUsuario.Text = "Imprimir un Usuario";
-            this.btnImprimirUnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnImprimirUnUsuario.UseVisualStyleBackColor = false;
-            // 
-            // btnRegresar
-            // 
-            this.btnRegresar.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRegresar.Image = global::ConexionOracleconCshar.UI.Properties.Resources.arrow_redo;
-            this.btnRegresar.Location = new System.Drawing.Point(12, 6);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(148, 39);
-            this.btnRegresar.TabIndex = 0;
-            this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRegresar.UseVisualStyleBackColor = false;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
-            // 
             // frmMantenimientoUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -231,8 +232,8 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
