@@ -124,7 +124,7 @@
             this.btnNuevoTelefono.Name = "btnNuevoTelefono";
             this.btnNuevoTelefono.Size = new System.Drawing.Size(179, 39);
             this.btnNuevoTelefono.TabIndex = 4;
-            this.btnNuevoTelefono.Text = "Agregar Telefono";
+            this.btnNuevoTelefono.Text = "Teléfono Usuario";
             this.btnNuevoTelefono.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevoTelefono.UseVisualStyleBackColor = false;
             // 
@@ -137,9 +137,10 @@
             this.btnNuevoCorreo.Name = "btnNuevoCorreo";
             this.btnNuevoCorreo.Size = new System.Drawing.Size(148, 39);
             this.btnNuevoCorreo.TabIndex = 3;
-            this.btnNuevoCorreo.Text = "Agregar Correo";
+            this.btnNuevoCorreo.Text = "Correo Usuario";
             this.btnNuevoCorreo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevoCorreo.UseVisualStyleBackColor = false;
+            this.btnNuevoCorreo.Click += new System.EventHandler(this.btnNuevoCorreo_Click);
             // 
             // pictureBox1
             // 

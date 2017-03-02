@@ -13,7 +13,6 @@ namespace ConexionOracleconCshar.UI
     public partial class frmMantenimientoUsuarios : Form
     {
         ConexionOracleconCshar.Model.Usuario usuario;
-        int codigoUnicoUsuario = 0;
         public frmMantenimientoUsuarios(ConexionOracleconCshar.Model.Usuario usuarioRegistrado)
         {
             usuario = usuarioRegistrado;
@@ -64,6 +63,7 @@ namespace ConexionOracleconCshar.UI
 
         private void btnEditarUsuario_Click(object sender, EventArgs e)
         {
+            int codigoUnicoUsuario = 0;
             if (dgvUsuarios.Rows.Count == 0)
             {
                 MessageBox.Show("Selecione un registro a Editar", "Error del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -81,6 +81,26 @@ namespace ConexionOracleconCshar.UI
 
         }
 
- 
+        private void btnNuevoCorreo_Click(object sender, EventArgs e)
+        {
+            int codigoUnicoUsuario = 0;
+            String nombreUsuario = String.Empty;
+            if (dgvUsuarios.Rows.Count == 0)
+            {
+                MessageBox.Show("Selecione un registro", "Error del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+
+                codigoUnicoUsuario = int.Parse(this.dgvUsuarios.CurrentRow.Cells[0].Value.ToString());
+                nombreUsuario = this.dgvUsuarios.CurrentRow.Cells[2].Value.ToString();
+                new Usuarios.frmCorreoUsuario(codigoUnicoUsuario, nombreUsuario).ShowDialog();
+                LlenarGridUsuarios();
+
+            }
+
+
+           
+        }
     }
 }

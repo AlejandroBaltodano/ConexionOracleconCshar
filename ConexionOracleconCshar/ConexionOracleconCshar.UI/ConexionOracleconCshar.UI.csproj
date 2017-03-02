@@ -75,6 +75,12 @@
     <Compile Include="Reportes\frmReporteDeUnUsuario.Designer.cs">
       <DependentUpon>frmReporteDeUnUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios\frmCorreoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\frmCorreoUsuario.Designer.cs">
+      <DependentUpon>frmCorreoUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios\frmEditarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReportedeTodoslosUsuarios.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteDeUnUsuario.rdlc" />
+    <EmbeddedResource Include="Usuarios\frmCorreoUsuario.resx">
+      <DependentUpon>frmCorreoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\frmEditarUsuario.resx">
       <DependentUpon>frmEditarUsuario.cs</DependentUpon>
     </EmbeddedResource>
