@@ -63,11 +63,23 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\frmConsultaCorreosDeUnUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmConsultaCorreosDeUnUsuario.Designer.cs">
+      <DependentUpon>frmConsultaCorreosDeUnUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\frmReporte.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes\frmReporte.Designer.cs">
       <DependentUpon>frmReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmReporteDeTodosLosCorreosYUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmReporteDeTodosLosCorreosYUsuarios.Designer.cs">
+      <DependentUpon>frmReporteDeTodosLosCorreosYUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\frmReporteDeUnUsuario.cs">
       <SubType>Form</SubType>
@@ -110,14 +122,22 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmConsultaCorreosDeUnUsuario.resx">
+      <DependentUpon>frmConsultaCorreosDeUnUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\frmReporte.resx">
       <DependentUpon>frmReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmReporteDeTodosLosCorreosYUsuarios.resx">
+      <DependentUpon>frmReporteDeTodosLosCorreosYUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\frmReporteDeUnUsuario.resx">
       <DependentUpon>frmReporteDeUnUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteCorreosDeUnUsuario.rdlc" />
     <EmbeddedResource Include="Reportes\ReportedeTodoslosUsuarios.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteDeUnUsuario.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteTodosUsuariosYCorreos.rdlc" />
     <EmbeddedResource Include="Usuarios\frmCorreoUsuario.resx">
       <DependentUpon>frmCorreoUsuario.cs</DependentUpon>
     </EmbeddedResource>

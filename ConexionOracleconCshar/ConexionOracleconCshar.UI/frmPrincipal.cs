@@ -63,5 +63,10 @@ namespace ConexionOracleconCshar.UI
         {
             new Reportes.frmReporte().ShowDialog();
         }
+
+        private void correosDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Reportes.frmReporteDeTodosLosCorreosYUsuarios().ShowDialog();
+        }
     }
 }

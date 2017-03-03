@@ -58,3 +58,5 @@ C:\Users\JoseA\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\Cone
 C:\Users\JoseA\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\obj\Debug\ConexionOracleconCshar.UI.csproj.GenerateResource.Cache
 C:\Users\JoseA\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\obj\Debug\RdlCompile.cache
 C:\Users\JoseA\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\obj\Debug\RdlCompile.compiled
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\obj\Debug\ConexionOracleconCshar.UI.Reportes.frmReporteDeTodosLosCorreosYUsuarios.resources
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.UI\obj\Debug\ConexionOracleconCshar.UI.Reportes.frmConsultaCorreosDeUnUsuario.resources

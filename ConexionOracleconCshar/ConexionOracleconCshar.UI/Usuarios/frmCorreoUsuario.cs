@@ -213,5 +213,14 @@ namespace ConexionOracleconCshar.UI.Usuarios
 
        
         }
+
+        private void btnImprimirCorreosUnUsuario_Click(object sender, EventArgs e)
+        {
+            
+            new Reportes.frmConsultaCorreosDeUnUsuario(idUsuarioCorreo).ShowDialog();
+
+
+            
+        }
     }
 }

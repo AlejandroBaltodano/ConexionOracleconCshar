@@ -34,6 +34,8 @@ namespace ConexionOracleconCshar.UI {
         
         private ConsultaUnUsuarioDataTable tableConsultaUnUsuario;
         
+        private ConsultaCorreosDeUnUsuarioDataTable tableConsultaCorreosDeUnUsuario;
+        
         private global::System.Data.DataRelation relationUSUARIOS_ROLES;
         
         private global::System.Data.DataRelation relationTELEFONOS_USUARIOS;
@@ -82,6 +84,9 @@ namespace ConexionOracleconCshar.UI {
                 }
                 if ((ds.Tables["ConsultaUnUsuario"] != null)) {
                     base.Tables.Add(new ConsultaUnUsuarioDataTable(ds.Tables["ConsultaUnUsuario"]));
+                }
+                if ((ds.Tables["ConsultaCorreosDeUnUsuario"] != null)) {
+                    base.Tables.Add(new ConsultaCorreosDeUnUsuarioDataTable(ds.Tables["ConsultaCorreosDeUnUsuario"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -148,6 +153,16 @@ namespace ConexionOracleconCshar.UI {
         public ConsultaUnUsuarioDataTable ConsultaUnUsuario {
             get {
                 return this.tableConsultaUnUsuario;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public ConsultaCorreosDeUnUsuarioDataTable ConsultaCorreosDeUnUsuario {
+            get {
+                return this.tableConsultaCorreosDeUnUsuario;
             }
         }
         
@@ -233,6 +248,9 @@ namespace ConexionOracleconCshar.UI {
                 if ((ds.Tables["ConsultaUnUsuario"] != null)) {
                     base.Tables.Add(new ConsultaUnUsuarioDataTable(ds.Tables["ConsultaUnUsuario"]));
                 }
+                if ((ds.Tables["ConsultaCorreosDeUnUsuario"] != null)) {
+                    base.Tables.Add(new ConsultaCorreosDeUnUsuarioDataTable(ds.Tables["ConsultaCorreosDeUnUsuario"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -296,6 +314,12 @@ namespace ConexionOracleconCshar.UI {
                     this.tableConsultaUnUsuario.InitVars();
                 }
             }
+            this.tableConsultaCorreosDeUnUsuario = ((ConsultaCorreosDeUnUsuarioDataTable)(base.Tables["ConsultaCorreosDeUnUsuario"]));
+            if ((initTable == true)) {
+                if ((this.tableConsultaCorreosDeUnUsuario != null)) {
+                    this.tableConsultaCorreosDeUnUsuario.InitVars();
+                }
+            }
             this.relationUSUARIOS_ROLES = this.Relations["USUARIOS_ROLES"];
             this.relationTELEFONOS_USUARIOS = this.Relations["TELEFONOS_USUARIOS"];
             this.relationUSUARIO_CORREO = this.Relations["USUARIO_CORREO"];
@@ -319,6 +343,8 @@ namespace ConexionOracleconCshar.UI {
             base.Tables.Add(this.tableTABLA_CORREO_USUARIO);
             this.tableConsultaUnUsuario = new ConsultaUnUsuarioDataTable();
             base.Tables.Add(this.tableConsultaUnUsuario);
+            this.tableConsultaCorreosDeUnUsuario = new ConsultaCorreosDeUnUsuarioDataTable();
+            base.Tables.Add(this.tableConsultaCorreosDeUnUsuario);
             this.relationUSUARIOS_ROLES = new global::System.Data.DataRelation("USUARIOS_ROLES", new global::System.Data.DataColumn[] {
                         this.tableTABLA_ROLES_USUARIOS.IDROLUSUARIOColumn}, new global::System.Data.DataColumn[] {
                         this.tableTABLA_USUARIO.IDROLUSUARIOColumn}, false);
@@ -360,6 +386,12 @@ namespace ConexionOracleconCshar.UI {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeConsultaUnUsuario() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeConsultaCorreosDeUnUsuario() {
             return false;
         }
         
@@ -432,6 +464,9 @@ namespace ConexionOracleconCshar.UI {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void ConsultaUnUsuarioRowChangeEventHandler(object sender, ConsultaUnUsuarioRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void ConsultaCorreosDeUnUsuarioRowChangeEventHandler(object sender, ConsultaCorreosDeUnUsuarioRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1976,6 +2011,317 @@ namespace ConexionOracleconCshar.UI {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class ConsultaCorreosDeUnUsuarioDataTable : global::System.Data.TypedTableBase<ConsultaCorreosDeUnUsuarioRow> {
+            
+            private global::System.Data.DataColumn columnIDCORREOUSUARIO;
+            
+            private global::System.Data.DataColumn columnIDUSUARIO;
+            
+            private global::System.Data.DataColumn columnCORREO;
+            
+            private global::System.Data.DataColumn columnCEDULA;
+            
+            private global::System.Data.DataColumn columnNOMBRECOMPLETO;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ConsultaCorreosDeUnUsuarioDataTable() {
+                this.TableName = "ConsultaCorreosDeUnUsuario";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal ConsultaCorreosDeUnUsuarioDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected ConsultaCorreosDeUnUsuarioDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IDCORREOUSUARIOColumn {
+                get {
+                    return this.columnIDCORREOUSUARIO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IDUSUARIOColumn {
+                get {
+                    return this.columnIDUSUARIO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CORREOColumn {
+                get {
+                    return this.columnCORREO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CEDULAColumn {
+                get {
+                    return this.columnCEDULA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NOMBRECOMPLETOColumn {
+                get {
+                    return this.columnNOMBRECOMPLETO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ConsultaCorreosDeUnUsuarioRow this[int index] {
+                get {
+                    return ((ConsultaCorreosDeUnUsuarioRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ConsultaCorreosDeUnUsuarioRowChangeEventHandler ConsultaCorreosDeUnUsuarioRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ConsultaCorreosDeUnUsuarioRowChangeEventHandler ConsultaCorreosDeUnUsuarioRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ConsultaCorreosDeUnUsuarioRowChangeEventHandler ConsultaCorreosDeUnUsuarioRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ConsultaCorreosDeUnUsuarioRowChangeEventHandler ConsultaCorreosDeUnUsuarioRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddConsultaCorreosDeUnUsuarioRow(ConsultaCorreosDeUnUsuarioRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ConsultaCorreosDeUnUsuarioRow AddConsultaCorreosDeUnUsuarioRow(decimal IDCORREOUSUARIO, decimal IDUSUARIO, string CORREO, string CEDULA, string NOMBRECOMPLETO) {
+                ConsultaCorreosDeUnUsuarioRow rowConsultaCorreosDeUnUsuarioRow = ((ConsultaCorreosDeUnUsuarioRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        IDCORREOUSUARIO,
+                        IDUSUARIO,
+                        CORREO,
+                        CEDULA,
+                        NOMBRECOMPLETO};
+                rowConsultaCorreosDeUnUsuarioRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowConsultaCorreosDeUnUsuarioRow);
+                return rowConsultaCorreosDeUnUsuarioRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                ConsultaCorreosDeUnUsuarioDataTable cln = ((ConsultaCorreosDeUnUsuarioDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new ConsultaCorreosDeUnUsuarioDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnIDCORREOUSUARIO = base.Columns["IDCORREOUSUARIO"];
+                this.columnIDUSUARIO = base.Columns["IDUSUARIO"];
+                this.columnCORREO = base.Columns["CORREO"];
+                this.columnCEDULA = base.Columns["CEDULA"];
+                this.columnNOMBRECOMPLETO = base.Columns["NOMBRECOMPLETO"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnIDCORREOUSUARIO = new global::System.Data.DataColumn("IDCORREOUSUARIO", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIDCORREOUSUARIO);
+                this.columnIDUSUARIO = new global::System.Data.DataColumn("IDUSUARIO", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIDUSUARIO);
+                this.columnCORREO = new global::System.Data.DataColumn("CORREO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCORREO);
+                this.columnCEDULA = new global::System.Data.DataColumn("CEDULA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCEDULA);
+                this.columnNOMBRECOMPLETO = new global::System.Data.DataColumn("NOMBRECOMPLETO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNOMBRECOMPLETO);
+                this.columnIDCORREOUSUARIO.AllowDBNull = false;
+                this.columnIDUSUARIO.AllowDBNull = false;
+                this.columnCORREO.AllowDBNull = false;
+                this.columnCORREO.MaxLength = 60;
+                this.columnCEDULA.AllowDBNull = false;
+                this.columnCEDULA.MaxLength = 50;
+                this.columnNOMBRECOMPLETO.AllowDBNull = false;
+                this.columnNOMBRECOMPLETO.MaxLength = 100;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ConsultaCorreosDeUnUsuarioRow NewConsultaCorreosDeUnUsuarioRow() {
+                return ((ConsultaCorreosDeUnUsuarioRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new ConsultaCorreosDeUnUsuarioRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(ConsultaCorreosDeUnUsuarioRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.ConsultaCorreosDeUnUsuarioRowChanged != null)) {
+                    this.ConsultaCorreosDeUnUsuarioRowChanged(this, new ConsultaCorreosDeUnUsuarioRowChangeEvent(((ConsultaCorreosDeUnUsuarioRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.ConsultaCorreosDeUnUsuarioRowChanging != null)) {
+                    this.ConsultaCorreosDeUnUsuarioRowChanging(this, new ConsultaCorreosDeUnUsuarioRowChangeEvent(((ConsultaCorreosDeUnUsuarioRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.ConsultaCorreosDeUnUsuarioRowDeleted != null)) {
+                    this.ConsultaCorreosDeUnUsuarioRowDeleted(this, new ConsultaCorreosDeUnUsuarioRowChangeEvent(((ConsultaCorreosDeUnUsuarioRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.ConsultaCorreosDeUnUsuarioRowDeleting != null)) {
+                    this.ConsultaCorreosDeUnUsuarioRowDeleting(this, new ConsultaCorreosDeUnUsuarioRowChangeEvent(((ConsultaCorreosDeUnUsuarioRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveConsultaCorreosDeUnUsuarioRow(ConsultaCorreosDeUnUsuarioRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DataSetEsquemaMigracion ds = new DataSetEsquemaMigracion();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "ConsultaCorreosDeUnUsuarioDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class TABLA_USUARIORow : global::System.Data.DataRow {
@@ -2348,6 +2694,76 @@ namespace ConexionOracleconCshar.UI {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class ConsultaCorreosDeUnUsuarioRow : global::System.Data.DataRow {
+            
+            private ConsultaCorreosDeUnUsuarioDataTable tableConsultaCorreosDeUnUsuario;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal ConsultaCorreosDeUnUsuarioRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableConsultaCorreosDeUnUsuario = ((ConsultaCorreosDeUnUsuarioDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal IDCORREOUSUARIO {
+                get {
+                    return ((decimal)(this[this.tableConsultaCorreosDeUnUsuario.IDCORREOUSUARIOColumn]));
+                }
+                set {
+                    this[this.tableConsultaCorreosDeUnUsuario.IDCORREOUSUARIOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal IDUSUARIO {
+                get {
+                    return ((decimal)(this[this.tableConsultaCorreosDeUnUsuario.IDUSUARIOColumn]));
+                }
+                set {
+                    this[this.tableConsultaCorreosDeUnUsuario.IDUSUARIOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CORREO {
+                get {
+                    return ((string)(this[this.tableConsultaCorreosDeUnUsuario.CORREOColumn]));
+                }
+                set {
+                    this[this.tableConsultaCorreosDeUnUsuario.CORREOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CEDULA {
+                get {
+                    return ((string)(this[this.tableConsultaCorreosDeUnUsuario.CEDULAColumn]));
+                }
+                set {
+                    this[this.tableConsultaCorreosDeUnUsuario.CEDULAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NOMBRECOMPLETO {
+                get {
+                    return ((string)(this[this.tableConsultaCorreosDeUnUsuario.NOMBRECOMPLETOColumn]));
+                }
+                set {
+                    this[this.tableConsultaCorreosDeUnUsuario.NOMBRECOMPLETOColumn] = value;
+                }
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -2503,6 +2919,40 @@ namespace ConexionOracleconCshar.UI {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ConsultaUnUsuarioRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class ConsultaCorreosDeUnUsuarioRowChangeEvent : global::System.EventArgs {
+            
+            private ConsultaCorreosDeUnUsuarioRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ConsultaCorreosDeUnUsuarioRowChangeEvent(ConsultaCorreosDeUnUsuarioRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ConsultaCorreosDeUnUsuarioRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3840,6 +4290,191 @@ WHERE        (MIGRACION.TABLA_USUARIO.IDUSUARIO = :idUsuarioConsulta)";
             this.Adapter.SelectCommand = this.CommandCollection[0];
             this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(idUsuarioConsulta));
             DataSetEsquemaMigracion.ConsultaUnUsuarioDataTable dataTable = new DataSetEsquemaMigracion.ConsultaUnUsuarioDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class ConsultaCorreosDeUnUsuarioTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleDataAdapter _adapter;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleConnection _connection;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleTransaction _transaction;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public ConsultaCorreosDeUnUsuarioTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::Oracle.ManagedDataAccess.Client.OracleDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::Oracle.ManagedDataAccess.Client.OracleCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::Oracle.ManagedDataAccess.Client.OracleDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "ConsultaCorreosDeUnUsuario";
+            tableMapping.ColumnMappings.Add("IDCORREOUSUARIO", "IDCORREOUSUARIO");
+            tableMapping.ColumnMappings.Add("IDUSUARIO", "IDUSUARIO");
+            tableMapping.ColumnMappings.Add("CORREO", "CORREO");
+            tableMapping.ColumnMappings.Add("CEDULA", "CEDULA");
+            tableMapping.ColumnMappings.Add("NOMBRECOMPLETO", "NOMBRECOMPLETO");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection();
+            this._connection.ConnectionString = global::ConexionOracleconCshar.UI.Properties.Settings.Default.ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
+            this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        MIGRACION.TABLA_CORREO_USUARIO.IDCORREOUSUARIO, MIGRACION.TABLA_CORREO_USUARIO.IDUSUARIO, MIGRACION.TABLA_CORREO_USUARIO.CORREO, MIGRACION.TABLA_USUARIO.CEDULA, 
+                         MIGRACION.TABLA_USUARIO.NOMBRECOMPLETO
+FROM            MIGRACION.TABLA_CORREO_USUARIO INNER JOIN
+                         MIGRACION.TABLA_USUARIO ON MIGRACION.TABLA_CORREO_USUARIO.IDUSUARIO = MIGRACION.TABLA_USUARIO.IDUSUARIO
+WHERE        (MIGRACION.TABLA_CORREO_USUARIO.IDUSUARIO = :IdUsuarioConsulta)";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = ":IdUsuarioConsulta";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "IDUSUARIO";
+            this._commandCollection[0].Parameters.Add(param);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DataSetEsquemaMigracion.ConsultaCorreosDeUnUsuarioDataTable dataTable, decimal IdUsuarioConsulta) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(IdUsuarioConsulta));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DataSetEsquemaMigracion.ConsultaCorreosDeUnUsuarioDataTable GetData(decimal IdUsuarioConsulta) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(IdUsuarioConsulta));
+            DataSetEsquemaMigracion.ConsultaCorreosDeUnUsuarioDataTable dataTable = new DataSetEsquemaMigracion.ConsultaCorreosDeUnUsuarioDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
