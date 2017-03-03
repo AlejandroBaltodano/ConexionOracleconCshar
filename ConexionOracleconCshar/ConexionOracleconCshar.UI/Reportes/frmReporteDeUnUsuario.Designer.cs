@@ -28,17 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteDeUnUsuario));
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dataSetEsquemaMigracion = new ConexionOracleconCshar.UI.DataSetEsquemaMigracion();
+            this.dataSetEsquemaMigracionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consultaUnUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consultaUnUsuarioTableAdapter = new ConexionOracleconCshar.UI.DataSetEsquemaMigracionTableAdapters.ConsultaUnUsuarioTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetEsquemaMigracion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetEsquemaMigracionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultaUnUsuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSetUnUsuario";
+            reportDataSource1.Value = this.consultaUnUsuarioBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ConexionOracleconCshar.UI.Reportes.ReporteDeUnUsuario.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(754, 420);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // dataSetEsquemaMigracion
+            // 
+            this.dataSetEsquemaMigracion.DataSetName = "DataSetEsquemaMigracion";
+            this.dataSetEsquemaMigracion.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataSetEsquemaMigracionBindingSource
+            // 
+            this.dataSetEsquemaMigracionBindingSource.DataSource = this.dataSetEsquemaMigracion;
+            this.dataSetEsquemaMigracionBindingSource.Position = 0;
+            // 
+            // consultaUnUsuarioBindingSource
+            // 
+            this.consultaUnUsuarioBindingSource.DataMember = "ConsultaUnUsuario";
+            this.consultaUnUsuarioBindingSource.DataSource = this.dataSetEsquemaMigracionBindingSource;
+            // 
+            // consultaUnUsuarioTableAdapter
+            // 
+            this.consultaUnUsuarioTableAdapter.ClearBeforeFill = true;
             // 
             // frmReporteDeUnUsuario
             // 
@@ -55,6 +87,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte De Un Usuario";
             this.Load += new System.EventHandler(this.frmReporteDeUnUsuario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetEsquemaMigracion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetEsquemaMigracionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultaUnUsuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -62,5 +97,9 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource consultaUnUsuarioBindingSource;
+        private System.Windows.Forms.BindingSource dataSetEsquemaMigracionBindingSource;
+        private DataSetEsquemaMigracion dataSetEsquemaMigracion;
+        private DataSetEsquemaMigracionTableAdapters.ConsultaUnUsuarioTableAdapter consultaUnUsuarioTableAdapter;
     }
 }

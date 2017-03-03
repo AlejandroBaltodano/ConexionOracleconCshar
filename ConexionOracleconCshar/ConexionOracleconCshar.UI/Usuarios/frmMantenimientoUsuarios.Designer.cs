@@ -71,6 +71,7 @@
             this.btnImprimirUnUsuario.Text = "Imprimir un Usuario";
             this.btnImprimirUnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnImprimirUnUsuario.UseVisualStyleBackColor = false;
+            this.btnImprimirUnUsuario.Click += new System.EventHandler(this.btnImprimirUnUsuario_Click);
             // 
             // btnRegresar
             // 

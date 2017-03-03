@@ -12,14 +12,16 @@ namespace ConexionOracleconCshar.UI.Reportes
 {
     public partial class frmReporteDeUnUsuario : Form
     {
-        public frmReporteDeUnUsuario()
+        public int idUsuarioConsulta = 0;
+        public frmReporteDeUnUsuario(int idUsuario)
         {
+            idUsuarioConsulta = idUsuario;
             InitializeComponent();
         }
 
         private void frmReporteDeUnUsuario_Load(object sender, EventArgs e)
         {
-
+            this.consultaUnUsuarioTableAdapter.Fill(this.dataSetEsquemaMigracion.ConsultaUnUsuario,idUsuarioConsulta);
             this.reportViewer1.RefreshReport();
         }
     }

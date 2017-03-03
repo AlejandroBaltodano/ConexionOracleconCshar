@@ -120,5 +120,23 @@ namespace ConexionOracleconCshar.UI
         {
             BuscarUsuario();
         }
+
+        private void btnImprimirUnUsuario_Click(object sender, EventArgs e)
+        {
+            int codigoUnicoUsuario = 0;
+            String nombreUsuario = String.Empty;
+            if (dgvUsuarios.Rows.Count == 0)
+            {
+                MessageBox.Show("Selecione un registro", "Error del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+
+                codigoUnicoUsuario = int.Parse(this.dgvUsuarios.CurrentRow.Cells[0].Value.ToString());
+                new Reportes.frmReporteDeUnUsuario(codigoUnicoUsuario).ShowDialog();
+           
+
+            }
+        }
     }
 }
