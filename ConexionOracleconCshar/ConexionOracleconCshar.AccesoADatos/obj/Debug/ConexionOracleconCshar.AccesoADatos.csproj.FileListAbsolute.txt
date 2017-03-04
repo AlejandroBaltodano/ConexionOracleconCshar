@@ -11,4 +11,3 @@ C:\Users\JoseA\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\Cone
 C:\Users\JoseA\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.AccesoADatos\obj\Debug\ConexionOracleconCshar.AccesoADatos.csprojResolveAssemblyReference.cache
 C:\Users\JoseA\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.AccesoADatos\obj\Debug\ConexionOracleconCshar.AccesoADatos.dll
 C:\Users\JoseA\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.AccesoADatos\obj\Debug\ConexionOracleconCshar.AccesoADatos.pdb
-C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.AccesoADatos\obj\Debug\ConexionOracleconCshar.AccesoADatos.csprojResolveAssemblyReference.cache
