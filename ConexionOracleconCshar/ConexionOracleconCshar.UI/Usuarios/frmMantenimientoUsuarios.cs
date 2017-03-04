@@ -107,7 +107,8 @@ namespace ConexionOracleconCshar.UI
             ConexionOracleconCshar.AccesoADatos.ConexionOracle conexion = new AccesoADatos.ConexionOracle();
             string query = "select u.IDUSUARIO,u.CEDULA,u.NOMBRECOMPLETO,u.USUARIOLOGIN," +
                   "u.PASSWORDLOGIN,r.NOMBREROL from TABLA_USUARIO u inner join TABLA_ROLES_USUARIOS r " +
-                  "on u.IDROLUSUARIO = r.IDROLUSUARIO where u.NOMBRECOMPLETO LIKE '%"+txtBuscarUsuario.Text+"%'";
+                  "on u.IDROLUSUARIO = r.IDROLUSUARIO where u.NOMBRECOMPLETO LIKE '%"+txtBuscarUsuario.Text+"%'"+
+                  " or u.CEDULA LIKE '"+txtBuscarUsuario.Text+"%' ";
 
             conexion.LlenarGrid(query,dgvUsuarios);
             PropiedadesGrip();

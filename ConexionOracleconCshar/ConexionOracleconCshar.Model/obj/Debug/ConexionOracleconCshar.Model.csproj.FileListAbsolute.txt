@@ -7,3 +7,4 @@ C:\Users\JoseA\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\Cone
 C:\Users\JoseA\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.Model\obj\Debug\ConexionOracleconCshar.Model.csprojResolveAssemblyReference.cache
 C:\Users\JoseA\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.Model\obj\Debug\ConexionOracleconCshar.Model.dll
 C:\Users\JoseA\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.Model\obj\Debug\ConexionOracleconCshar.Model.pdb
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\ConexionOracleconCshar\ConexionOracleconCshar\ConexionOracleconCshar.Model\obj\Debug\ConexionOracleconCshar.Model.csprojResolveAssemblyReference.cache

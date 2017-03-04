@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.ManagedDataAccess.Client;
 
 
 namespace ConexionOracleconCshar.UI.Usuarios
@@ -48,22 +49,63 @@ namespace ConexionOracleconCshar.UI.Usuarios
 
         }
 
+        public bool ValidarUsuario() {
+            String cedula = String.Empty;
+            String login = String.Empty;
+            
+ ConexionOracleconCshar.AccesoADatos.ConexionOracle conexion = new AccesoADatos.ConexionOracle();
+            String query = "SELECT CEDULA,USUARIOLOGIN FROM TABLA_USUARIO WHERE "+
+ " USUARIOLOGIN = upper('"+txtNombreUsuario.Text+"') or CEDULA = '"+txtCedula.Text+"'";
+
+   OracleDataReader reader = conexion.Query(query);
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    cedula = reader.GetString(0);
+                    login = reader.GetString(1);
+
+                }
+              
+            }
+            if (txtCedula.Text == cedula || txtNombreUsuario.Text.ToUpper() == login )
+            {
+                return false;
+
+            }
+            else
+            {
+                return true;
+            }
+
+
+        }
+
         private void btnCrear_Click(object sender, EventArgs e)
         {
+         
             try
             {
                 if (ValidarCampos()  )
                 {
-                    
-          ConexionOracleconCshar.AccesoADatos.ConexionOracle conexion = new ConexionOracleconCshar.AccesoADatos.ConexionOracle();
-string Query = "begin " +
-   "INSERTARUSUARIO('" + txtCedula.Text + "','" + txtNombre.Text + "','" + txtNombreUsuario.Text + "','" + txtContraseña.Text + "'," + cbROL.SelectedValue + " ); " +
-                      "end; ";
+                    if (ValidarUsuario())
+                    {
+                      ConexionOracleconCshar.AccesoADatos.ConexionOracle conexion = new ConexionOracleconCshar.AccesoADatos.ConexionOracle();
+                        string Query = "begin " +
+                           "INSERTARUSUARIO('" + txtCedula.Text + "','" + txtNombre.Text + "','" + txtNombreUsuario.Text + "','" + txtContraseña.Text + "'," + cbROL.SelectedValue + " ); " +
+                                              "end; ";
                         // se envia los parametros en la consulta
                         conexion.OperacionDML(Query);
                         MessageBox.Show("Transaccion Realizada exitosamente", "Informacion del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    this.Close();
+                        this.Close();
+                    }
+                    else
+                    {
+ MessageBox.Show("La cedula o el nombre de usuario ya existen en el sistema\nDebe de ingresar otro regsitro diferente", "Error del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
+         
                 }
                 else
                 {

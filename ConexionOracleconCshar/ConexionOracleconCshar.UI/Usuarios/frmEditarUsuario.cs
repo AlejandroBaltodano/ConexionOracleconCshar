@@ -49,6 +49,39 @@ namespace ConexionOracleconCshar.UI.Usuarios
 
         }
 
+        public bool ValidarUsuario()
+        {
+            String cedula = String.Empty;
+            String login = String.Empty;
+            ConexionOracleconCshar.AccesoADatos.ConexionOracle conexion = new AccesoADatos.ConexionOracle();
+            String query = "SELECT CEDULA,USUARIOLOGIN FROM TABLA_USUARIO WHERE " +
+ " USUARIOLOGIN = upper('" + txtNombreUsuario.Text + "')";//consulta que manda a traer lo que hay en base de datos
+
+            OracleDataReader reader = conexion.Query(query);//objeto reader para extraer los datos de la consulta
+            if (reader.HasRows)//verifica si hay filas seleccionadas
+            {
+                while (reader.Read())//recorre el objeto y mete los datos a la variables
+                {
+                    cedula = reader.GetString(0);
+                    login = reader.GetString(1);
+
+                }
+
+            }
+            if (txtCedula.Text == cedula || txtNombreUsuario.Text.ToUpper() == login)//se evaluan si algunos de los dos es verdadero, ahi se utiliza el .toUpper()
+            {
+                return false;//retorna falso para que no proceda
+
+            }
+            else
+            {
+                return true;//retorna true para que proceda.
+            }
+
+
+        }
+
+
         public void ObtenerUsuarioPorId(int id) {
             AccesoADatos.ConexionOracle conexion = new AccesoADatos.ConexionOracle();
             String query = String.Empty;
@@ -97,15 +130,18 @@ namespace ConexionOracleconCshar.UI.Usuarios
             {
                 if (ValidarCampos())
                 {
+                   
+                        AccesoADatos.ConexionOracle conexion = new AccesoADatos.ConexionOracle();
+                        String query = String.Empty;
+                        query = "begin " +
+    " ACTUALIZARUSUARIO(" + IdUsuarioEditar + ",'" + txtCedula.Text + "','" + txtNombre.Text + "','" + txtNombreUsuario.Text + "','" + txtContraseña.Text + "'," + cbROL.SelectedValue + "); " +
+                        " end; ";
+                        conexion.OperacionDML(query);
+                        MessageBox.Show("Transaccion Realizada exitosamente", "Informacion del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                 
 
-                    AccesoADatos.ConexionOracle conexion = new AccesoADatos.ConexionOracle();
-                    String query = String.Empty;
-                    query = "begin "+
-" ACTUALIZARUSUARIO("+IdUsuarioEditar+",'"+txtCedula.Text+"','"+txtNombre.Text+"','"+txtNombreUsuario.Text+"','"+txtContraseña.Text+"',"+cbROL.SelectedValue+"); "+
-                    " end; ";
-                    conexion.OperacionDML(query);
- MessageBox.Show("Transaccion Realizada exitosamente", "Informacion del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    
                 }
                 else
                 {
