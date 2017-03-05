@@ -93,6 +93,7 @@
             // 
             this.btnRegresar.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresar.Image = global::ConexionOracleconCshar.UI.Properties.Resources.arrow_redo;
             this.btnRegresar.Location = new System.Drawing.Point(3, 3);
             this.btnRegresar.Name = "btnRegresar";
@@ -110,6 +111,7 @@
             this.groupBox1.Controls.Add(this.btnNuevoTelefono);
             this.groupBox1.Controls.Add(this.txtTelefono);
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(2, 58);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(722, 124);
@@ -165,7 +167,7 @@
             // 
             this.txtTelefono.Location = new System.Drawing.Point(249, 34);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(255, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(255, 26);
             this.txtTelefono.TabIndex = 1;
             // 
             // label2
