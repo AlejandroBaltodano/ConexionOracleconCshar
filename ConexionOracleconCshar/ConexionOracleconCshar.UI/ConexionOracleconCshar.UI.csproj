@@ -119,6 +119,12 @@
     <Compile Include="Usuarios\frmNuevoUsuario.Designer.cs">
       <DependentUpon>frmNuevoUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios\frmTelefonoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\frmTelefonoUsuario.Designer.cs">
+      <DependentUpon>frmTelefonoUsuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +168,9 @@
     </Compile>
     <EmbeddedResource Include="Usuarios\frmNuevoUsuario.resx">
       <DependentUpon>frmNuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\frmTelefonoUsuario.resx">
+      <DependentUpon>frmTelefonoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataSetEsquemaMigracion.xsc">
       <DependentUpon>DataSetEsquemaMigracion.xsd</DependentUpon>

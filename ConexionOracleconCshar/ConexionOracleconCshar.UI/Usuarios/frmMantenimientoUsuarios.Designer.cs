@@ -196,6 +196,7 @@
             this.btnNuevoTelefono.Text = "Teléfono Usuario";
             this.btnNuevoTelefono.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevoTelefono.UseVisualStyleBackColor = false;
+            this.btnNuevoTelefono.Click += new System.EventHandler(this.btnNuevoTelefono_Click);
             // 
             // btnNuevoCorreo
             // 

@@ -139,5 +139,24 @@ namespace ConexionOracleconCshar.UI
 
             }
         }
+
+        private void btnNuevoTelefono_Click(object sender, EventArgs e)
+        {
+            int codigoUnicoUsuario = 0;
+            String nombreUsuario = String.Empty;
+            if (dgvUsuarios.Rows.Count == 0)
+            {
+                MessageBox.Show("Selecione un registro", "Error del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+
+                codigoUnicoUsuario = int.Parse(this.dgvUsuarios.CurrentRow.Cells[0].Value.ToString());
+                nombreUsuario = this.dgvUsuarios.CurrentRow.Cells[2].Value.ToString();
+                new Usuarios.frmTelefonoUsuario(codigoUnicoUsuario, nombreUsuario).ShowDialog();
+                LlenarGridUsuarios();
+
+            }
+        }
     }
 }
