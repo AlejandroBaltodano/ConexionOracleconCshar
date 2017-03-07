@@ -61,6 +61,8 @@ namespace ConexionOracleconCshar.UI
 
         private void usuariosDelSistemaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+
             new Reportes.frmReporte().ShowDialog();
         }
 
