@@ -64,7 +64,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+L4zil+uOEeGuy/Zbg5f9lsGvWyi3tV/2nlXkZ6ptQA=</dsig:DigestValue>
+        <dsig:DigestValue>hcFuAQSdVTAGhc/bd1fT+tuL1HA1k490ClBneNIZBJc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -76,19 +76,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Xsp2u7JL4BCDNZY2WQdO5XPXVJKBm1ZN/0noYLx2jP8=</dsig:DigestValue>
+        <dsig:DigestValue>1uod64ZZDvp2Vcbwh1kVZ6r0WQpBBCN5fb18j2/Q9oc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ConexionOracleconCshar.UI.exe" size="648616">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ConexionOracleconCshar.UI.exe" size="647592">
       <assemblyIdentity name="ConexionOracleconCshar.UI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>f8bjRo+Rq81NFxSlKSd+A4UMfJsv6RIZuViBip3nYKI=</dsig:DigestValue>
+        <dsig:DigestValue>JudQ12bGOZoGsFrhE+0UVmXboSfln3i+/8HTRj668JU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
